@@ -31,30 +31,29 @@
     </canvas>
 
     <!--    Menu -->
-    <div id="settings-div" class="col-6 container menu-container" style="z-index: 10;">
+    <div id="settings-div" class="col-md-6 col-xs-12 container menu-container" style="z-index: 10;">
         <form class="row" style="background-color: #ffffff; opacity: 0.8; border-radius: 5px;">
 
             <div class="col-12">
-                <div class="offset-md-4 col-md-4">
+                <div class="offset-md-4 col-md-4 col-xs-12">
                     <input id="username-text" type="text" class="form-control" id="inputEmail4" placeholder="Username">
                 </div>
 
             </div>
-
 
             <div class="row" style="margin: 0px">
                 <div class="row col-8">
 
                     <div class="row">
 
-                        <div class="col-6">
+                        <div class="col-md-6 col-xs-12">
                             Game mode
                             <select id="game-mode-select" class="form-select" aria-label="Default select example">
                             </select>
 
                         </div>
 
-                        <div class="col-6">
+                        <div class="col-md-6 col-xs-12">
                             Texture pack
                             <select  id="texture-mode-select" class="form-select" aria-label="Default select example">
                             </select>
@@ -63,14 +62,14 @@
 
                     </div>
 
-                    <div class="col-4" style="padding: 20px 0 20px 20px">
+                    <div class="col-md-4 col-xs-12" style="padding: 20px 0 20px 20px">
 
                         <div class="offset-md-1 col-md-10"> dimension [4, 10] </div>
                         <div class="offset-md-1 col-md-10"> difficulty [1, 20] </div>
 
                     </div>
 
-                    <div class="col-4" style="padding: 20px 20px 20px 0">
+                    <div class="col-md-4 col-xs-12" style="padding: 20px 20px 20px 0">
                         <input id="env-dim-range" type="range" class="form-range custom-range" min="4" max="10" step="1" value="5" >
                         <input id="env-level-range" type="range" class="form-range custom-range" min="1" max="20" step="1" >
                     </div>
@@ -79,7 +78,7 @@
                 </div>
 
 
-                <div class="col-4">
+                <div class="col-md-4 col-xs-12">
 
 
                     <div class="form-check form-switch checkbox-warning-filled">
@@ -124,7 +123,7 @@
 
             </div>
 
-            <div class="col-12">
+            <div class="col-12 col-xs-12">
                 <button type="button" class="offset-2 col-4 btn btn-warning" id="btn-save"> Save </button>
                 <button type="button" class="col-4 btn btn-warning" id="btn-start" disabled> Start </button>
             </div>
@@ -134,7 +133,7 @@
 
 
     <!--    Results -->
-    <div id="result-div" class="col-4 container menu-container" style="z-index: 15;">
+    <div id="result-div" class="col-md-4 col-xs-12 container menu-container" style="z-index: 15;">
         <form class="row" style="background-color: #ffffff; opacity: 0.8; border-radius: 5px;">
 
             <div class="col-12" id="result-text">
