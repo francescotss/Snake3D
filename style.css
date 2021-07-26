@@ -1,0 +1,56 @@
+
+/*!* Canvas responsive*!*/
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+#loader-div{
+    /*display: none;*/
+}
+.loader-container{
+    width: 100%;
+    height: 100%;
+
+}
+
+#canvas-div{
+    display: none;
+}
+canvas{
+    width: 100%;
+    height: 100%;
+
+}
+
+#settings-div{
+    display: none;
+}
+
+form.row > div{
+    padding: 20px;
+}
+
+#result-div{
+    display: none;
+    font-size: 30px;
+}
+
+
+.custom-range::-webkit-slider-thumb {
+    background: #ffc107;
+}
+
+.custom-range::-moz-range-thumb {
+    background: #ffc107;
+}
+
+.custom-range::-ms-thumb {
+    background: #ffc107;
+}
+
+.form-check-input:checked {
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
