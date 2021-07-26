@@ -348,62 +348,59 @@ export class Controller{
 
     #init_touchscreen(){
 
-
         const controller = this;
 
-        const screen_width = screen.width;
-        const screen_height = screen.height;
+        document.addEventListener('touchstart', handleTouchStart, false);
+        document.addEventListener('touchmove', handleTouchMove, false);
 
-        let el = document.getElementById('canvas-div');
-        el.addEventListener("touchstart", handleStart, false);
-        el.addEventListener("touchend", handleEnd, false);
-        el.addEventListener("touchcancel", handleCancel, false);
-        el.addEventListener("touchmove", handleMove, false);
+        let xDown = null;
+        let yDown = null;
 
-        function handleStart(e){
+        function getTouches(evt) {
+            return evt.touches || evt.changedTouches;
         }
 
-        function handleEnd(e){
-            let touch = e.touches[0] || e.changedTouches[0];
-            let x = touch.pageX;
-            let y = touch.pageY;
-            on_screen_location_touched(x, y);
+        function handleTouchStart(evt) {
+            const firstTouch = getTouches(evt)[0];
+            xDown = firstTouch.clientX;
+            yDown = firstTouch.clientY;
         }
 
-        function handleCancel(e){
-        }
-
-        function handleMove(e){
-        }
-
-        function is_controller_location(x, y){
-            const w = screen_width;
-            const h = screen_height;
-            return x > 0 && x < w && y > h - h/2 && y < h ;
-        }
-
-        function on_screen_location_touched(x, y){
-            if( ! is_controller_location(x, y) ) return;
+        function handleTouchMove(evt) {
 
             if (!controller.started) return;
             controller.update_snake_position();
 
-            const w = screen_width;
-            const h = screen_height;
-            if (x < w / 4 && y < h && y > h / 2){
-                //    left
-                controller.left();
-            } else if ( x > w - w/4 && x < w && y < h && y > h / 2){
-                //    right
-                controller.right();
-            } else if ( x > w/4 && x <  w - w/4 && y < h - h / 4 && y > h / 2){
-                // up
-                controller.up();
-            } else if ( x > w/4 && x <  w - w/4 && y < h && y > h - h / 4){
-                // down
-                controller.down();
+            if ( ! xDown || ! yDown ) {
+                return;
             }
-        }
 
+            const xUp = evt.touches[0].clientX;
+            const yUp = evt.touches[0].clientY;
+
+            const xDiff = xDown - xUp;
+            const yDiff = yDown - yUp;
+
+            if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
+                if ( xDiff > 0 ) {
+                    /* left swipe */
+                    controller.left()
+                } else {
+                    /* right swipe */
+                    controller.right()
+                }
+            } else {
+                if ( yDiff > 0 ) {
+                    /* up swipe */
+                    controller.up();
+                } else {
+                    /* down swipe */
+                    controller.down();
+                }
+            }
+            /* reset values */
+            xDown = null;
+            yDown = null;
+        }
     }
 }
