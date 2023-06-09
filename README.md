@@ -20,3 +20,6 @@ The snake can be controlled using the keyboard's directional keys. Be careful no
 To play Snake3D, simply open the provided HTML file in a web browser that supports JavaScript. Use the directional keys on your keyboard to control the snake's movement. Eat the food, grow, and aim for a high score!
 
 Feel free to explore the repository to understand the code and make any modifications or improvements you desire.
+
+### Authors
+Leonardo Ospizio, Francesco Riccardo Tassone
