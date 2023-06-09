@@ -1,4 +1,5 @@
-## Snake3D
+# Snake3D
+The project was developed as part of the Computer Graphics class at Sapienza University of Rome.
 
 Snake3D is a classic game implementation of Snake in a 3D environment. The game is built using JavaScript and the Three.js library, bringing a new twist to the traditional Snake gameplay.
 
