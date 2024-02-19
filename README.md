@@ -1,7 +1,10 @@
+
+![Snake3d](https://github.com/francescotss/Snake3D/assets/44005266/4ad19db8-8de0-446b-94c6-eace1419d75a)
+
 # Snake3D
 The project was developed as part of the Computer Graphics class at Sapienza University of Rome.
 
-Snake3D is a classic game implementation of Snake in a 3D environment. The game is built using JavaScript and the Three.js library, bringing a new twist to the traditional Snake gameplay.
+Snake3D is the implementation of the classic Snake in a 3D environment. The game is built using JavaScript and the Three.js library, bringing a new twist to the traditional Snake gameplay.
 
 ### Gameplay
 
@@ -18,7 +21,15 @@ The snake can be controlled using the keyboard's directional keys. Be careful no
 
 ### Getting Started
 
-To play Snake3D, simply open the provided HTML file in a web browser that supports JavaScript. Use the directional keys on your keyboard to control the snake's movement. Eat the food, grow, and aim for a high score!
+#### Quick Start
+
+👉 [Play Now on GitHub](https://francescotss.github.io/Snake3D/)
+
+Use the directional keys on your keyboard to control the snake's movement. Eat the food, grow, and aim for a high score!
+
+#### Developers
+
+To play Snake3D, open index.html in a web browser that supports JavaScript. 
 
 Feel free to explore the repository to understand the code and make any modifications or improvements you desire.
 
