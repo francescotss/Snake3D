@@ -2,7 +2,6 @@
 ![Snake3d](https://github.com/francescotss/Snake3D/assets/44005266/4ad19db8-8de0-446b-94c6-eace1419d75a)
 
 # Snake3D
-The project was developed as part of the Computer Graphics class at Sapienza University of Rome.
 
 Snake3D is the implementation of the classic Snake in a 3D environment. The game is built using JavaScript and the Three.js library, bringing a new twist to the traditional Snake gameplay.
 
